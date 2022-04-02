@@ -1,0 +1,24 @@
+{
+    "name": "moegle dark",
+    "description": "Enhanced Dark Omegle",
+    "version": "0.0.1",
+    "version_name": "beta",
+    "author": "TheBlueDragon",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "JS/background.js"
+      },
+      "permissions": ["storage", "activeTab", "scripting"],
+    "content_scripts": [
+        {
+            "matches": ["https://www.omegle.com/"],
+            "js": ["JS/content.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "MOEGLE Dark",
+        "default_icon": "res/moegle.png"
+    },
+    "options_page": "options.html"
+}
